@@ -17,7 +17,9 @@ import alfyTest from 'alfy-test';
 test('foo', async t => {
 	const alfy = alfyTest();
 
-	const result = await alfy('workflow input');
+	// ** If there are some args, put it on the back.
+	// const result = await alfy('workflow.js some_arguments');
+	const result = await alfy('yourWorkFlowFile.js');
 
 	t.deepEqual(result, [
 		{
@@ -73,13 +75,13 @@ Default: `'1'`
 
 Show the item subtitle.
 
-### alfy(...input)
+### alfy(input)
 
 Returns a `Promise` that returns the `items` of the workflow.
 
 #### input
 
-Type: `string[]`
+Type: `string`
 
 Workflow input.
 
