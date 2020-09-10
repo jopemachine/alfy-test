@@ -25,7 +25,7 @@ module.exports = options => {
 		const filePath = await findUp('info.plist');
 		const info = plist.parse(await fs.readFile(filePath, 'utf8'));
 
-		const {stdout} = await execa('run-node', [input], {
+		const {stdout} = await execa(`run-node`, [...(input.split(" "))], {
 			env: env(info, options),
 			preferLocal: true,
 			localDir: __dirname
