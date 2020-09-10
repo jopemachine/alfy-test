@@ -45,7 +45,7 @@
 		"execa": "^4.0.0",
 		"find-up": "^4.1.0",
 		"plist": "^3.0.1",
-		"run-node": "^1.0.0",
+		"run-node": "git+https://github.com/jopemachine/run-node",
 		"tempfile": "^3.0.0"
 	},
 	"devDependencies": {
